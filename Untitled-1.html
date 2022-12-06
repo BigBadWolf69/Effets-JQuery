@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="exojquery.js" defer></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p id="un">Au click, il disparaît</p>
+    <p id="deux">Au doubleclick, il disparaît</p>
+    <p id="trois">Au passage au dessus, il change de couleur</p>
+    <p id="quatre">Au click, la taille change</p>
+</body>
+<script>
+$("#un").click(function(){
+    $("#un").hide();
+    });
+
+$("#deux").dblclick(function(){
+    $("#deux").hide();
+});
+$("#trois").hover(function(){
+    $('#trois').css('color', 'red');},
+    function(){
+        $('#trois').css('color', 'black')
+});
+
+$("#quatre").click(function(){
+    $("#quatre").css("font-size", "170px");
+});
+    </script>
+</html>
